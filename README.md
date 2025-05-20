@@ -21,11 +21,6 @@ Vous pouvez :
    - [XAMPP](https://www.apachefriends.org/)
    - [MAMP](https://www.mamp.info/)
 
-2. Cloner ce dépôt :
-   ```bash
-   git clone https://github.com/votre-utilisateur/nom-du-repo.git
-Copie collé ce code et colle le dans ton base .
-
 
 CREATE TABLE IF NOT EXISTS utilisateurs (
     id INT AUTO_INCREMENT PRIMARY KEY,
