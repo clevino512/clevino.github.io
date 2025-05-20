@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="conn.css">
+    <title>CONNEXION - JEUX DE QUIZ</title>
+</head>
+<body>
+    <section class="page">
+        <header>JEUX DE QUIZ</header>
+
+        <form method="POST" action="connexion.php">
+            <label>Nom d'utilisateur :</label>
+            <input type="text" name="username" required>
+
+            <label>Mot de passe :</label>
+            <input type="password" name="password" required>
+
+            <button type="submit" class="btn">Se connecter</button>
+        </form>
+        
+        <div class="validation">
+            <div class="col">
+                <a href="inscription.html">Je suis nouveau</a>
+                <span>/</span>
+                <a href="recuperation.html">Mot de passe oublié?</a>
+            </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>

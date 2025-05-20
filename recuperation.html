@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="conn.css">
+    <title>RÉCUPÉRATION - JEUX DE QUIZ</title>
+</head>
+<body>   
+    <div class="cadre">
+        <header>JEUX DE QUIZ</header>
+        <div class="texte">
+            <p>Pas de panique ! On est là pour vous aider à récupérer votre compte Quiz.</p>
+            <p>Suivez simplement les instructions suivantes :</p>
+        </div>
+        
+        <form id="recoveryForm" method="post" action="recuperation.php">
+            <div class="date">
+                <div class="pass" id="dateDiv">
+                    <label for="date">Date de naissance :
+                        <input type="date" id="dateInput" name="date" required>    
+                    </label>
+                    <p id="notification" class="hidden">Veuillez remplir le champ pour continuer</p>
+                </div>
+                
+                <div class="pass1 hidden" id="passDiv">
+                    <label for="password">Nouveau mot de passe :
+                        <input type="password" id="password" name="password" placeholder="Nouveau mot de passe" required minlength="6">
+                    </label>
+                    <label for="confirmPassword">Confirmer le mot de passe :
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirmer le mot de passe" required minlength="6">
+                    </label>
+                    <p id="recoveryError" class="error-message"></p>
+                </div>
+            </div>
+            
+            <div class="commande">
+                <button type="button" onclick="annuler()">Annuler</button>
+                <button type="button" id="btn" onclick="continuer()">Continuer</button>
+            </div>
+        </form>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

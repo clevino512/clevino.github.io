@@ -1,0 +1,411 @@
+/* style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Titan One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.contenu {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1400px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  width: 100%;
+  height: 80px;
+  background-color: #FE6E70;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav h1 {
+  font-size: 24px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+#timer {
+  font-size: 28px;
+  margin-left: 10px;
+  color: white;
+}
+
+.level {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 80px);
+}
+
+.gauche {
+  width: 25%;
+  background-color: #f8f8f8;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.gauche h1 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#level-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.level-link {
+  display: block;
+  padding: 15px;
+  text-align: center;
+  background-color: #FE6E70;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.level-link.active {
+  background-color: #4CAF50;
+}
+
+.level-link.locked {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.level-link:not(.locked):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.centre {
+  width: 50%;
+  background-color: #FE6E70;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.tete {
+  background-color: #7B6E6E;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px 8px 0 0;
+}
+
+.tete h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  color: white;
+}
+
+.quiz {
+  background-color: white;
+  padding: 20px;
+  border-radius: 0 0 8px 8px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#question-text {
+  font-size: 28px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #333;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.question {
+  padding: 15px;
+  background-color: #D9D9D9;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.question:hover {
+  transform: scale(1.02);
+}
+
+.question.selected {
+  background-color: #2196F3;
+  color: white;
+}
+
+.question.correct {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.question.wrong {
+  background-color: #f44336;
+  color: white;
+}
+
+.commande {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#cancel-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+#next-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#next-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.progress-bullets {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 5px;
+}
+
+.progress-bullets span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: background-color 0.3s;
+}
+
+.progress-bullets span.active {
+  background-color: #4CAF50;
+}
+
+.droite {
+  width: 25%;
+  background-color: #f8f8f8;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 3px solid #FE6E70;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.droite a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  margin-bottom: 10px;
+  transition: all 0.3s;
+}
+
+.droite a:hover {
+  color: #FE6E70;
+  transform: translateX(5px);
+}
+
+.statistique {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  display: none;
+}
+
+.statistique header {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  font-size: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+#close-stats-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #FE6E70;
+  color: white;
+}
+
+/* Styles pour la notification de fin de niveau */
+.completion-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.completion-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.completion-content h2 {
+  color: #FE6E70;
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+.completion-content p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.completion-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.completion-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.completion-buttons button:first-child {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.completion-buttons button:last-child {
+  background-color: #FE6E70;
+  color: white;
+}
+
+.completion-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style amélioré pour les indicateurs de progression */
+.progress-bullets {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.bullet {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ddd;
+  transition: all 0.3s;
+}
+
+.bullet.answered {
+  background-color: #4CAF50;
+}
+
+.bullet.current {
+  background-color: #FE6E70;
+  transform: scale(1.3);
+}
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js" defer></script>
+    <title>JEUX DE QUIZ</title>
+</head>
+<body>
+    <div class="contenu">
+        <nav>
+            <h1>Temps écoulé: <span id="timer">00:00</span></h1>
+        </nav>
+        <div class="level">
+            <div class="gauche">
+                <h1>Niveau du Jeu</h1>
+                <div id="level-list">
+                    <a href="#" class="level-link active" data-level="1">Niveau 1</a>
+                    <a href="#" class="level-link locked" data-level="2">Niveau 2</a>
+                    <a href="#" class="level-link locked" data-level="3">Niveau 3</a>
+                    <a href="#" class="level-link locked" data-level="4">Niveau 4</a>
+                    <a href="#" class="level-link locked" data-level="5">Niveau 5</a>
+                    <a href="#" class="level-link locked" data-level="6">Niveau 6</a>
+                    <a href="#" class="level-link locked" data-level="7">Niveau 7</a>
+                    <a href="#" class="level-link locked" data-level="8">Niveau 8</a>
+                    <a href="#" class="level-link locked" data-level="9">Niveau 9</a>
+                    <a href="#" class="level-link locked" data-level="10">Niveau 10</a>
+                </div>
+            </div>
+            <div class="centre">
+                <div class="tete">
+                    <h1 id="current-level">Niveau 1</h1>
+                </div>
+
+                <div class="quiz" >
+                    <h1 id="question-text">Chargement de la question...</h1>
+                    <div class="options-container">
+                        <div class="question" data-index="0">Réponse 1</div>
+                        <div class="question" data-index="1">Réponse 2</div>
+                        <div class="question" data-index="2">Réponse 3</div>
+                    </div>
+                    <div class="commande">
+                        <button id="cancel-btn">Annuler</button>
+                        <button id="next-btn" disabled>Continuer</button>  
+                    </div>
+                    <div class="progress-bullets" id="progress-bullets"></div>
+                </div>
+            </div>
+
+            <div class="droite">
+                <div class="image">
+                    <img src="/image/user.avif" alt="sary" width="100">
+                </div>
+                <a href="#">Mon compte</a>
+                <a href="#" id="profil">Paramètres</a>
+                <a href="#" id="stats-btn">Statistique</a>
+                <a href="connexion.html">Déconnexion</a>
+            </div>
+            
+            <div class="statistique" id="statistiqueBox" style="display: none;">
+                <header>Résultats</header>
+                <table border="2">
+                    <tr>
+                        <th>Niveau actuel</th>
+                        <td id="stats-level">1</td>
+                    </tr>
+                    <tr>
+                        <th>Bonne réponse</th>
+                        <td id="stats-correct">0</td>
+                    </tr>
+                    <tr>
+                        <th>Mauvaise réponse</th>
+                        <td id="stats-wrong">0</td>
+                    </tr>
+                    <tr>
+                        <th>Temps passé</th>
+                        <td id="stats-time">00:00</td>
+                    </tr>
+                </table>
+                <button id="close-stats-btn">Fermer</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

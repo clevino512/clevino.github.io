@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>INSCRIPTION - JEUX DE QUIZ</title>
+</head>
+<body>
+    <section class="page">
+        <header>JEUX DE QUIZ</header>
+
+        <form id="inscriptionForm" class="inscription" method="post" action="inscription.php">    
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+            
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+            
+            <label for="pays">Pays :</label>
+            <select id="pays" name="pays" required>
+                <option value="">-- Sélectionnez un pays --</option>
+                <option value="Madagascar">Madagascar</option>
+                <option value="France">France</option>
+                <option value="Canada">Canada</option>
+                <option value="Allemagne">Allemagne</option>
+                <option value="États-Unis">États-Unis</option>
+                <option value="Maroc">Maroc</option>
+                <option value="Côte d'Ivoire">Côte d'Ivoire</option>
+            </select>
+
+            <label for="naissance">Date de naissance :</label>
+            <input type="date" id="naissance" name="naissance" required>
+            
+            <label for="pass1">Mot de passe :</label>
+            <input type="password" id="pass1" name="pass1" required minlength="6">
+            
+            <label for="pass2">Confirmer le mot de passe :</label>
+            <input type="password" id="pass2" name="pass2" required minlength="6">
+            <p id="passwordError" class="error-message"></p>
+        </form>
+        
+        <div class="validation">
+            <a href="connexion.html">Je suis déjà membre</a>
+            <button type="submit" form="inscriptionForm">S'inscrire</button>
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
